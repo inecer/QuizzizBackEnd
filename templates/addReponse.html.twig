@@ -1,0 +1,18 @@
+{% block content %}
+    <div class="p-10 min-h-screen flex items-center justify-center bg-gray-900 min-h-full p-10">
+        <div class="content bg-white space-y-1O rounded-md shadow md:w-1/2 lg:w-1/2 mx-auto ">
+    <form action="reponse" method="post">
+        <div class="content">
+            <br>
+            <h1 class="font-bold text-xl text-gray-700 police-mono">Ajouter une réponse</h1>
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Valeur</label>
+            <input placeholder="La valeur de la réponse..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="text" name="valeur" >
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Chemin de l'image (facultatif)</label>
+            <input placeholder="Le chemin de l'image..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="text" name="cheminImage">
+            <br>
+            <input class="bg-indigo-500 hover:bg-indigo-400 w-full p-3 shadow-md font-bold text-lg text-white rounded-lg transition duration-300 mt-6" type="submit" value="Confirmer">
+        </div>
+    </form>
+{% endblock %}

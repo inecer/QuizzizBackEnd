@@ -1,0 +1,23 @@
+{
+    "name": "tigui/bst-sio-a-g6-2022-quizziz-backend",
+    "autoload": {
+        "psr-4": {
+            "Ez\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Malamine-75",
+            "email": "malam.guirassy@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "twig/twig": "^3.3",
+        "nikic/fast-route": "^1.3",
+      "ext-pdo": "*"
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public"
+    }
+}

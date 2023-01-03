@@ -1,0 +1,25 @@
+{% include "navbar.html.twig" %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="p-10 min-h-screen flex items-center justify-center bg-gray-900">
+        <div class="contents space-x-10">
+        <form method="get" action="/questions">
+            <button class="transition ease-in-out delay-150 font-mono text-xl text-gray-900 bg-indigo-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-300 hover:text-indigo-700 duration-300 w-40 h-40 rounded-lg shadow-2xl items-center">Ajouter une question</button>
+        </form>
+        <form method="get" action="/questionnaire">
+                    <button class="transition ease-in-out delay-150 font-mono text-xl text-gray-900 bg-indigo-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-300 hover:text-indigo-700 duration-300 w-40 h-40 rounded-lg shadow-2xl items-center">Ajouter un questionnaire</button>
+                </form>
+        <form method="get" action="/questionquestionnaire">
+            <button class="transition ease-in-out delay-150 font-mono text-xl text-gray-900 bg-indigo-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-300 hover:text-indigo-700 duration-300 w-40 h-40 rounded-lg shadow-2xl items-center">Affecter une question au questionnaire</button>
+        </form>
+        <form method="get" action="/reponse">
+            <button class="transition ease-in-out delay-150 font-mono text-xl text-gray-900 bg-indigo-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-300 hover:text-indigo-700 duration-300 w-40 h-40 rounded-lg shadow-2xl items-center">Ajouter une reponse à la question</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}

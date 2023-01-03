@@ -1,0 +1,24 @@
+{% block content %}
+    <div class=" min-h-screen flex items-center justify-center bg-gray-900 min-h-full p-10">
+    <div class="content bg-white space-y-1O rounded-md shadow md:w-1/2 lg:w-1/2 mx-auto ">
+    <form action="questions" method="post">
+        <div class="content">
+            <br>
+            <h1 class="font-bold text-xl text-gray-700 police-mono">Ajouter une nouvelle question</h1>
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Id Question</label>
+            <input placeholder="L'id de la question..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="number" name="idQuestion" required>
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Libellé question</label>
+            <input placeholder="Le libellé de la question..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="text" name="libelleQuestion" required>
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Nombre de réponse</label>
+            <input placeholder="Le nombres de réponse..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="number" name="nbReponse" required>
+            <br>
+            <label class="block mb-2 font-bold text-gray-700 text-md">Nombre de bonne réponse</label>
+            <input placeholder="Le nombre de bonne réponse..." class="border border-gray-300 shadow p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent transition duration-300" type="number" name="nbBonneReponse" required>
+            <br>
+            <input class="bg-indigo-500 hover:bg-indigo-400 w-full p-3 shadow-md font-bold text-lg text-white rounded-lg transition duration-300 mt-6" type="submit" value="Confirmer">
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% include "navbar.html.twig" %}
+{% include "addQuestionnaire.html.twig" %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+{% endblock %}
+{% block content %}
+<div class="p-10 min-h-screen flex items-center justify-center bg-gray-900">
+    <div class="contents C">
+    <div class="content bg-gray-900 p-10 rounded-lg shadow md:w-3/4 lg:w-1/2 mx-auto ">
+        {% if add==true %}
+            <p class="text-center font-bold text-xl text-indigo-300 police-mono">Questionnaire ajouté !</p>
+        {% endif %}
+        <hr>
+        <br>
+        <h1 class="pb-6µG text-center text-2xl font-semibold rounded-full bg-indigo-500 hover:bg-indigo-400 text-white transition duration-300">Liste des questionnaires :</h1>
+        <br>
+        <table class="table-auto leading-10 w-auto">
+            <thead class="z-10 divide-y divide-indigo-500 hover:divide-indigo-400 transition duration-300">
+                <tr class="bg-indigo-100 divide-x divide-indigo-800">
+                    <th class="w-64 px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider bg-indigo-500 hover:bg-indigo-400 transition duration-300 ">Id</th>
+                    <th class="w-64 px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider bg-indigo-500 hover:bg-indigo-400 transition duration-300">Nom</th>
+                </tr>
+            </thead>
+            {% for value in questionnaires %}
+            <tbody class="bg-white divide-y divide-indigo-300">
+                <tr class="divide-x divide-indigo-300">
+                    <td class="px-6 py-4 whitespace-nowrap bg-white border-r border-indigo-200">{{ value.idQuestionnaire }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-white border-r border-indigo-200">{{ value.getLibelleQuestionnaire }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+</div>
+{% endblock %}
